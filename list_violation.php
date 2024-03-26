@@ -8,13 +8,13 @@ $sql = "SELECT * FROM violations";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<h2>Список нарушений:</h2>";
+    echo "<h1>Список нарушений:</h1>";
     echo "<ul>";
     while ($row = $result->fetch_assoc()) {
         echo "<li>";
-        echo "<p><b> Дата и время:</b> </p> " . $row["dateViolation"];
-        echo "<p><b> Вид нарушения</b> </p> " . $row["nameViolation"];
-        echo "<p><b> Размер штрафа</b> </p> " . $row["costViolation"];
+        echo "<h3><b> Дата и время:</b> </h3> " . $row["dateViolation"];
+        echo "<h3><b> Вид нарушения</b> </h3> " . $row["nameViolation"];
+        echo "<h3><b> Размер штрафа</b> </h3> " . $row["costViolation"];
         echo "</li> <br>";
     }
     echo "</ul>";
