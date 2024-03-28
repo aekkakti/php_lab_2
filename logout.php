@@ -1,6 +1,5 @@
 <?php
-session_start();
-if(session_destroy()) {
-    header("Location: login.php");
-}
+require_once 'connected.php';
+setcookie('username', null);
+header('Location: login.php');
 ?>
