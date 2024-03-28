@@ -1,9 +1,7 @@
 <?php
-global $conn;
 require('connected.php');
 if (isset($_REQUEST['username'])) {
-    $username = stripslashes($_REQUEST['username']);
-    $username = mysqli_real_escape_string($conn, $username);
+    $username = $_COOKIE['username'];
     $password = stripslashes($_REQUEST['password']);
     $query    = "INSERT into `infouser` (username, password) VALUES ('$username', '$password')";
     $result   = mysqli_query($conn, $query);
@@ -30,6 +28,7 @@ if (isset($_REQUEST['username'])) {
     </form>
     <?php
 }
+ob_start();
 ?>
 </body>
 </html>
