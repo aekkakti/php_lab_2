@@ -39,7 +39,7 @@ if (isset($_COOKIE['username'])) {
     }
     else {
         echo "<h1>Вы не авторизировались</h1>";
-        echo "<a href='login.php'>Войти</a>";
+        echo "<h2><a href='login.php'>Авторизация</a></h2><br>";
         exit;
     }
     ?>
